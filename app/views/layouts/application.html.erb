@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<%= render :template =>"navbar/navbar"%>
+
+<%= render :partial =>"navbar/navbar", :locals => { :active => action } %>
 <div class='container -body-wrapper'>	
 	<%= yield %>
 </div>

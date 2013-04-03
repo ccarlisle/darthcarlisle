@@ -1,14 +1,9 @@
+
+
 <%
-
-links = [
-
-	{name='shit', dest='www.reddit.com'},
-	{name='fuck', dest='www.reddit.com'},
-	{name='ass', dest='www.reddit.com'}
-]
-
+   if !active
+     active="home"
 %>
-
 
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
@@ -16,14 +11,14 @@ links = [
 			<div class='nav-collapse collapse'> 
 				<ul class='nav'>
 
-					<li class='active'>
-						<a href='/'>Home</a>
+					<li  <% if(active == "home")  %> class='active' <% end %>>
+						<%= link_to "Home", :action => "home" %>
 					</li>
-					<li>
-						<a href='http://www.reddit.com'>Reddit</a>
+					<li <% if(active == "something")  %> class='active' <% end %>>
+						<a href='http://www.reddit.com'>Something</a>
 					</li>
-					<li>
-						<a href='http://www.facebook.com'>Facebook</a>
+					<li <% if(active == "somethingelse")  %> class='active' <% end %>>
+						<a href='http://www.facebook.com'>SomethingElse</a>
 					</li>
 
 
